@@ -1,4 +1,3 @@
-*/
 #include <Ultrasonic.h>
 
 Ultrasonic ultrasonic(12, 13);
@@ -19,7 +18,6 @@ void setup(){
 
   delay(2000);//DELAY DE INICIO
 }
-//****************************************************************************************************************************************
 void loop(){
 
   distancia = ultrasonic.read();
@@ -29,7 +27,7 @@ if ( distancia <=35 && distancia >=11) {// SE A DISTANCIA ESTIVAR ENTRE 35 E 11 
     digitalWrite(roda_da_ESQUERDA_2, LOW);//DIREITA
     digitalWrite(roda_da_direita_1, HIGH);
 
-    digitalWrite(roda_da_direita_2, HIGH);
+    digitalWrite(roda_da_direita_2, LOW);
     digitalWrite(roda_da_ESQUERDA_1, LOW);
     delay(100);
 
@@ -38,7 +36,7 @@ if ( distancia <=35 && distancia >=11) {// SE A DISTANCIA ESTIVAR ENTRE 35 E 11 
     digitalWrite(roda_da_direita_1, LOW);
 
     digitalWrite(roda_da_direita_2, LOW);
-    digitalWrite(roda_da_ESQUERDA_1,HIGH);
+    digitalWrite(roda_da_ESQUERDA_1,LOW);
     delay(100);
     }
   }else{ 
